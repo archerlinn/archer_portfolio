@@ -1,0 +1,401 @@
+/* GLOBAL RESET AND BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0d0d0d;
+  color: #cfcfcf;
+  font-family: 'Orbitron', sans-serif;
+  line-height: 1.6;
+}
+
+/* HEADINGS AND TEXT */
+h1, h2, h3, h4, h5, h6 {
+  color: #00ffff;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* LINKS */
+a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #79ffff;
+}
+
+/* NAVIGATION BAR */
+nav#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1em;
+  z-index: 999;
+}
+
+nav#navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  list-style: none;
+}
+
+nav#navbar li a {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2em;
+  text-align: center;
+  background: url('../images/robot-background.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.hero-content {
+  max-width: 600px;
+  background: rgba(13, 13, 13, 0.7);
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.hero-content h1 {
+  margin-bottom: 0.5em;
+  font-size: 2em;
+}
+
+.hero-content p {
+  margin-bottom: 1.5em;
+}
+
+/* PROJECTS SECTION */
+.projects-section {
+  padding: 6em 1em;
+  text-align: center;
+}
+
+.projects-section h2 {
+  margin-bottom: 1em;
+  font-size: 1.8em;
+}
+
+.robot-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+.robot-card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-front, 
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #1a1a1a;
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  transition: transform 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front img {
+  max-width: 40%;
+  margin-bottom: 0.5em;
+}
+
+.card-front h3 {
+  font-size: 1.2em;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  padding: 1em;
+  font-size: 0.9em;
+}
+
+.robot-card:hover .card-front,
+.robot-card:focus .card-front {
+  transform: rotateY(180deg);
+}
+
+.robot-card:hover .card-back,
+.robot-card:focus .card-back {
+  transform: rotateY(0deg);
+}
+
+/* ABOUT SECTION */
+.about-section {
+  padding: 6em 1em;
+  text-align: center;
+  background: #141414;
+}
+
+.about-section p {
+  max-width: 900px;
+  margin: 0 auto 1.5em auto;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.skill {
+  width: 100%;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+.skill-bar {
+  background: #2b2b2b;
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-level {
+  background: #00ffff;
+  text-align: right;
+  color: #0d0d0d;
+  padding-right: 0.5em;
+  height: 100%;
+  line-height: 20px;
+  border-radius: 10px;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  padding: 6em 1em;
+  text-align: center;
+}
+
+.contact-section h2 {
+  margin-bottom: 0.5em;
+}
+
+#contactForm {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+.form-group label span {
+  color: #ff6666;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6em;
+  font-family: 'Orbitron', sans-serif;
+  background: #1f1f1f;
+  border: 1px solid #3a3a3a;
+  color: #cfcfcf;
+  border-radius: 5px;
+  outline: none;
+}
+
+.submit-btn {
+  background: #00ffff;
+  color: #0d0d0d;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #79ffff;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 2em;
+  background: #0d0d0d;
+  border-top: 1px solid #333;
+}
+
+.site-footer p {
+  margin-bottom: 0.5em;
+}
+
+.social-links a {
+  margin: 0 0.5em;
+}
+
+/* SMALL WAVING ROBOT ICON */
+#robotIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 250px;
+  height: 250px;
+  background: url('../images/robot-wave-unscreen.gif') no-repeat center center / contain;
+  cursor: pointer;
+  z-index: 1001; /* Make sure it's above most elements */
+}
+
+/* CHATBOT STYLES */
+.chatbot-container {
+  position: fixed;
+  bottom: 300px; /* so it's above the robot icon */
+  right: 20px;
+  width: 300px;
+  max-height: 50vh;
+  background: #1a1a1a;
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.chatbot-container.hidden {
+  display: none;
+}
+
+.chatbot-header {
+  background: #0d0d0d;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-header h3 {
+  font-size: 1em;
+  color: #79ffff;
+}
+
+.chatbot-header button {
+  background: transparent;
+  color: #79ffff;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.chatbot-messages {
+  flex: 1;
+  padding: 1em;
+  overflow-y: auto;
+  font-size: 14px; /* Adjust font size */
+  line-height: 2; /* Optional: Adjust line height for better readability */
+}
+
+.chatbot-messages .message {
+  margin-bottom: 0.5em;
+}
+
+.chatbot-messages .user-msg {
+  text-align: right;
+  color: #79ffff;
+}
+
+.chatbot-messages .bot-msg {
+  text-align: left;
+  color: #cfcfcf;
+}
+
+.chatbot-input {
+  display: flex;
+  background: #141414;
+  padding: 0.5em;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 0.5em;
+  background: #1f1f1f;
+  border: 1px solid #3a3a3a;
+  color: #cfcfcf;
+  border-radius: 5px;
+  margin-right: 0.5em;
+}
+
+.chatbot-input button {
+  background: #00ffff;
+  color: #0d0d0d;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.chatbot-input button:hover {
+  background: #79ffff;
+}
+
+@media (max-width: 768px) {
+  nav#navbar ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .robot-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chatbot-container {
+    width: 80%;
+    right: 10%;
+    bottom: 80px;
+  }
+}
