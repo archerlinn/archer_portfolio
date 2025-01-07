@@ -53,7 +53,7 @@ const userInput = document.getElementById('userInput');
 const sendMsgBtn = document.getElementById('sendMsgBtn');
 
 /* Replace with your real API key (INSECURE for production) */
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "api key placeholder";
 
 /**
  * We maintain an array of message objects for the conversation.
