@@ -65,7 +65,7 @@ const userInput = document.getElementById('userInput');
 const sendMsgBtn = document.getElementById('sendMsgBtn');
 
 /* Replace with your real API key (INSECURE for production) */
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "key here";
 /**
  * We maintain an array of message objects for the conversation.
  * The first "system" message includes your life story or instructions.
