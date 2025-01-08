@@ -3,6 +3,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const fetch = require('node-fetch'); // For API requests
 const cors = require('cors');
+app.use(cors({ origin: 'https://archer-portfolio.onrender.com' }));
 
 // Initialize Express
 const app = express();
