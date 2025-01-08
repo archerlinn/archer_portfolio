@@ -3,18 +3,13 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const fetch = require('node-fetch'); // For API requests
 const cors = require('cors');
-app.use(cors({ origin: 'https://www.archerlin.space/', credentials: true }));
-
 
 // Initialize Express
 const app = express();
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
 
 // Middleware
-app.use(cors());
+app.use(cors({ origin: 'https://www.archerlin.space/', credentials: true }));
 app.use(express.json()); // Parse JSON body
 
 // Nodemailer transporter
