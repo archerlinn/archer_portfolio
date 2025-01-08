@@ -22,7 +22,7 @@ contactForm.addEventListener('submit', (e) => {
     return;
   }
 
-  fetch('https://archer-portfolio.onrender.com/send-email', {
+  fetch('http://localhost:3000/send-email', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ function sendMessage() {
   addMessageToChat(userMsg, "user-msg");
   userInput.value = "";
 
-  fetch('https://archer-portfolio.onrender.com/chat', {
+  fetch('http://localhost:3000/chat', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors({ origin: 'https://archer-portfolio.onrender.com' })); // CORS setup
+app.use(cors());
 app.use(express.json()); // Parse JSON body
 
 // Nodemailer transporter
