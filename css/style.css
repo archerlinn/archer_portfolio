@@ -113,6 +113,21 @@ nav#navbar li a {
   position: relative;
 }
 
+.robot-card:hover {
+  transform: translateY(-10px); /* Slightly lift the card */
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.4); /* Glow effect */
+}
+
+.card-front {
+  background: linear-gradient(145deg, #2b2b2b, #3a3a3a); /* Subtle gradient */
+  background-size: cover;
+  background-position: center;
+}
+
+.card-back {
+  background: linear-gradient(145deg, #1a1a1a, #292929); /* Subtle gradient */
+}
+
 .card-front, 
 .card-back {
   position: absolute;
@@ -130,8 +145,11 @@ nav#navbar li a {
 }
 
 .card-front img {
-  max-width: 40%;
-  margin-bottom: 0.5em;
+  width: 80px; /* Consistent size for icons/images */
+  height: 80px;
+  margin-bottom: 1em;
+  border-radius: 50%; /* Make the image circular */
+  border: 2px solid #00ffff; /* Add a glowing border */
 }
 
 .card-front h3 {
@@ -168,11 +186,33 @@ nav#navbar li a {
 
 .skills-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping if needed */
+  gap: 2em; /* Space between circles */
+  margin-top: 2em;
+}
+
+.skill-circle {
+  display: flex;
   align-items: center;
-  gap: 1em;
-  max-width: 400px;
-  margin: 0 auto;
+  justify-content: center;
+  width: 150px; /* Increase circle size */
+  height: 150px;
+  border-radius: 50%; /* Makes the container a perfect circle */
+  background: linear-gradient(145deg, #1e1e1e, #292929); /* Subtle gradient background */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds depth with a shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.skill-circle:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+.skill-circle img {
+  width: 120px; /* Larger logo size */
+  height: 120px;
+  border-radius: 50%; /* Optional: Makes the logo circular */
 }
 
 .skill {
@@ -182,24 +222,6 @@ nav#navbar li a {
 .skill span {
   display: block;
   margin-bottom: 0.2em;
-}
-
-.skill-bar {
-  background: #2b2b2b;
-  width: 100%;
-  height: 20px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.skill-level {
-  background: #00ffff;
-  text-align: right;
-  color: #0d0d0d;
-  padding-right: 0.5em;
-  height: 100%;
-  line-height: 20px;
-  border-radius: 10px;
 }
 
 /* CONTACT SECTION */
@@ -241,6 +263,13 @@ nav#navbar li a {
   color: #cfcfcf;
   border-radius: 5px;
   outline: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  height: 10vh;          /* Full viewport height to position in the middle */
 }
 
 .submit-btn {
