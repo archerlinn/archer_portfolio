@@ -2,9 +2,9 @@
 
 Welcome to my personal portfolio! 🎉 I spent a whole day on January 8, 2025, refreshing my knowledge of **JavaScript**, **CSS**, and **HTML**, and deploying this project to my custom domain: [archerlin.space](https://archerlin.space). This portfolio marks the beginning of an exciting year, showcasing my journey, projects, and passion for **AI** and **robotics**.
 
-**updates** - deployed backend to render free tier (has to wait ~50 seconds if haven't called backend for 15 minutes)
----
+updates - deployed backend to render free tier (has to wait ~50 seconds if haven't called backend for 15 minutes)
 
+---
 ## 🌟 Features
 - **Interactive AI Chatbot**: Meet **Arrow**, my AI childhood robot friend! Arrow knows all about my life story and is happy to share fun facts about me. Go ahead and ask!
 - **Project Highlights**: A gallery of my key projects, showcasing my work in AI, robotics, and beyond.
