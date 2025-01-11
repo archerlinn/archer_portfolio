@@ -39,7 +39,7 @@ This project was not only about building a portfolio but also a fantastic learni
 ---
 
 ## 🛠️ Future Plans
-1. **Backend Deployment**: Soon, I’ll integrate backend functionalities to handle:
+1. **Backend Deployment (DONE)**: Soon, I’ll integrate backend functionalities to handle:
    - **Contact forms** with email capabilities.
    - **AI chatbot API calls** for enhanced interactivity.
 2. **New Features**: Adding more project galleries and integrating real-time demos of my AI and robotics work.
